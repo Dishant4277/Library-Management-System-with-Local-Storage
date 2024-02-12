@@ -40,7 +40,8 @@ let Library = [Book1, Book2, Book3, Book4];
 function updateStorage(Library) {
   localStorage.setItem("library", JSON.stringify(Library));
 }
-if (getStorage() === undefined) {
+
+if (getStorage() === null) {
   updateStorage(Library);
 }
 
