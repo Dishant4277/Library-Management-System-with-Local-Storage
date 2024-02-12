@@ -1,0 +1,355 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: gainsboro;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+  font-size: 20px;
+}
+h2 {
+  font-size: 35px;
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-between;
+  align-items: center;
+  height: 12vh;
+  background-color: white;
+  padding: 0 3%;
+}
+
+.nav-links {
+  gap: 3.5rem;
+  list-style: none;
+  font-size: 1.5rem;
+  margin-right: 50px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: rgb(255, 80, 80);
+  text-decoration: underline;
+  text-underline-offset: 0.9rem;
+  text-decoration-color: rgb(255, 80, 80);
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+.icon {
+  margin-right: 5px;
+}
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: max-content;
+  max-height: 0;
+  overflow: hidden;
+  z-index: 2;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* forms */
+select {
+  padding: 8px;
+  background-color: rgb(255, 80, 80);
+  color: white;
+  font-size: 20px;
+  border: none;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn {
+  width: 80%;
+  padding: 10px;
+  font-size: 20px;
+  background-color: rgb(255, 80, 80);
+  color: white;
+  border: none;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* sections */
+
+section {
+  padding: 9vh;
+  height: 90vh;
+  margin: 15px 10px;
+  box-sizing: border-box;
+  min-height: fit-content;
+  background-color: white;
+  border-radius: 8px;
+}
+
+/* search section */
+#search {
+  height: 115vh;
+}
+.search-results {
+  margin: 15px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1350px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  height: 60vh;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+input[type="text"] {
+  padding: 8px;
+  margin-top: 8px;
+  font-size: 20px;
+  height: auto;
+  width: 70%;
+  border: 1px solid;
+  border-radius: 5px;
+  background-color: whitesmoke;
+}
+.search-container button {
+  padding: 8px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 20px;
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background: #ccc;
+}
+
+/* add section  */
+#add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.add-form {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+
+#add h2 {
+  margin-bottom: 30px;
+}
+
+.add-form p {
+  color: black;
+  font-size: 25px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.add-form label {
+  display: block;
+  margin: 0 20px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: rgb(85, 85, 85);
+}
+
+.add-form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0 20px;
+}
+
+.add-form button {
+  width: 100%;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.add-results {
+  margin: 15px;
+}
+
+/* list book section  */
+
+#list-book {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: max-content;
+}
+
+#books-table,
+th,
+td {
+  border: 3px solid rgb(255, 80, 80);
+  border-collapse: collapse;
+}
+#books-table {
+  width: 80%;
+  margin: 4vh 3vh;
+}
+td,
+th {
+  padding: 10px;
+  font-size: 20px;
+}
+.tab-btn {
+  width: 100%;
+}
+.results {
+  margin: 15px;
+}
+
+footer {
+  padding: 25px;
+  height: 10vh;
+  background-color: rgb(255, 80, 80);
+}
+
+footer p {
+  color: white;
+  text-align: center;
+}
