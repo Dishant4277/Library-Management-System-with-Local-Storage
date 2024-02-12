@@ -1,0 +1,118 @@
+@media screen and (max-width: 1400px) {
+  section {
+    height: fit-content;
+  }
+  #search {
+    height: fit-content;
+  }
+  .mySlides img {
+    height: 40vh;
+  }
+  select {
+    font-size: 15px;
+  }
+  input[type="text"] {
+    font-size: 15px;
+  }
+  .search-container button {
+    font-size: 15px;
+  }
+  .btn {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+
+  section {
+    padding: 10%;
+  }
+
+  input[type="text"] {
+    width: 85%;
+  }
+  .add-form button {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  nav {
+    height: 9vh;
+  }
+  .mySlides img {
+    height: 30vh;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 15px;
+  }
+  td,
+  th {
+    font-size: 12px;
+    padding: 5px;
+  }
+  .add-form p {
+    font-size: 18px;
+  }
+  .add-form label {
+    font-size: 15px;
+  }
+  .nav-links li a {
+    font-size: 1rem;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  input[type="text"] {
+    width: 75%;
+  }
+  .add-form button {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .logo {
+    font-size: 1rem;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 15px;
+  }
+  td,
+  th {
+    font-size: 10px;
+    padding: 2px;
+  }
+
+  input[type="text"] {
+    width: 60%;
+  }
+  .btn {
+    font-size: 10px;
+  }
+  .add-form button {
+    width: 60%;
+  }
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Management System</title>
+    <script
+      src="https://kit.fontawesome.com/7ab43ae0b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/mediaqueries.css" />
+    <link rel="icon" href="assets/book.svg" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">
+        <i class="fa-solid fa-book icon" style="color: #ff5050"></i
+        ><strong>Library Management Sytem</strong>
+      </div>
+      <div>
+        <strong>
+          <ul class="nav-links">
+            <li><a href="#search" class="active">Search</a></li>
+            <li><a href="#add">Add Book</a></li>
+            <li><a href="#list-book">Books</a></li>
+          </ul>
+        </strong>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">
+        <i class="fa-solid fa-book icon" style="color: #ff5050"></i>
+        <strong>Library Management System</strong>
+      </div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#search" onclick="toggleMenu()">Search</a></li>
+          <li><a href="#add" onclick="toggleMenu()">Add Book</a></li>
+          <li><a href="#list-book" onclick="toggleMenu()">Books</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <section id="search">
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="assets/slide1.jpg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="assets/slide2.jpg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="assets/slide3.jpg" style="width: 100%" />
+        </div>
+      </div>
+      <br />
+
+      <h2>Search a Book</h2>
+      <br />
+
+      <div class="search-container">
+        <form class="search-form">
+          <select name="search-by" id="search-by">
+            <option value="" disabled selected>Search By</option>
+            <option value="id">ID</option>
+            <option value="title">Title</option>
+            <option value="author">Author</option>
+          </select>
+          <input
+            type="text"
+            placeholder="Search.."
+            name="search"
+            id="search-input"
+            required
+          />
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass" style="color: #ff5050"></i>
+          </button>
+        </form>
+      </div>
+      <div class="search-results"></div>
+    </section>
+
+    <section id="add">
+      <h2>Add New Books to the Library!</h2>
+      <form class="add-form">
+        <p>Enter Details of the Book</p>
+        <label for="name-input">Title</label>
+        <input
+          type="text"
+          id="name-input"
+          name="title"
+          placeholder="Title of the Book"
+          required
+        />
+        <br />
+        <label for="author-input">Author</label>
+        <input
+          type="text"
+          id="author-input"
+          name="author"
+          placeholder="Author of the Book"
+        />
+        <br />
+        <button class="btn" type="submit">Add Book</button>
+      </form>
+      <div class="add-results"></div>
+    </section>
+
+    <section id="list-book">
+      <h2>Books in the Library!</h2>
+
+      <table id="books-table"></table>
+
+      <div class="results"></div>
+    </section>
+
+    <footer>
+      <p>Copyright &#169; 2024 Dishant Balotra. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
