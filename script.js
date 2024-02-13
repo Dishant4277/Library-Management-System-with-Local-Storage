@@ -25,24 +25,33 @@ function showSlides() {
 }
 
 // Library functions
-var id = 13120;
 
-var Book1 = new Book(id++, "Atomic Habits", "James Clear");
-var Book2 = new Book(id++, "King of Greed", "Ana Huang", false);
-var Book3 = new Book(id++, "It Ends with Us", "Colleen Hoover", false);
-var Book4 = new Book(id++, "Mathematics", "R.D. Sharma");
-let Library = [Book1, Book2, Book3, Book4];
+function getId() {
+  return JSON.parse(localStorage.getItem("id"));
+}
+function setId(id) {
+  localStorage.setItem("id", JSON.stringify(id));
+}
+if (getId() === null) {
+  setId(13120);
+}
+let id = getId();
 
 // remove items
 // localStorage.removeItem("library");
 
 // local storage functions
-function updateStorage(Library) {
-  localStorage.setItem("library", JSON.stringify(Library));
-}
 
 if (getStorage() === null) {
+  let Book1 = new Book(id++, "Atomic Habits", "James Clear");
+  let Book2 = new Book(id++, "King of Greed", "Ana Huang", false);
+  let Book3 = new Book(id++, "It Ends with Us", "Colleen Hoover", false);
+  let Book4 = new Book(id++, "Mathematics", "R.D. Sharma");
+  let Library = [Book1, Book2, Book3, Book4];
   updateStorage(Library);
+}
+function updateStorage(Library) {
+  localStorage.setItem("library", JSON.stringify(Library));
 }
 
 function getStorage() {
@@ -73,12 +82,13 @@ function handleAddBook(event) {
     library.push(book);
     updateStorage(library);
     addResult.innerHTML = `<em><p style='color: #28a745;'>Congratulations!! ID: ${book.id}, ${title} by ${author} Book is added to the Library.</em></p>`;
-    console.log(Library);
+    console.log(library);
     availableBooks();
   } else {
     addResult.innerHTML =
       "<em><p style='color: #dc3545;'>Please enter author of the Book</p></em>";
   }
+  setId(id);
 }
 
 // search functions
